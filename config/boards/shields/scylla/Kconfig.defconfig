@@ -3,25 +3,14 @@
  
  
 if SHIELD_SCYLLA_LEFT
-
-config ZMK_KEYBOARD_NAME
-	default "Scylla"
-
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
-	default y
-
+    config ZMK_SPLIT_BLE_ROLE_CENTRAL
+        def_bool y
 endif
 
 if SHIELD_SCYLLA_RIGHT
+    config ZMK_SPLIT_BLE_ROLE_CENTRAL
+        def_bool n
+endif
 
 config ZMK_KEYBOARD_NAME
-	default "Scylla Right"
-
-endif
-
-if SHIELD_SCYLLA_LEFT || SHIELD_SCYLLA_RIGHT
-
-config ZMK_SPLIT
-	default y
-	
-endif
+    default "Scylla MK2"
