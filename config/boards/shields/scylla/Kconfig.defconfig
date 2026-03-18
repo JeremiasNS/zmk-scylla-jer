@@ -1,7 +1,3 @@
-# Copyright (c) 2022 ZMK Contributors
-# SPDX-License-Identifier: MIT
- 
- 
 if SHIELD_SCYLLA_LEFT
     config ZMK_SPLIT_BLE_ROLE_CENTRAL
         def_bool y
@@ -13,4 +9,4 @@ if SHIELD_SCYLLA_RIGHT
 endif
 
 config ZMK_KEYBOARD_NAME
-    default "Scylla MK2"
+    default "Scylla"
