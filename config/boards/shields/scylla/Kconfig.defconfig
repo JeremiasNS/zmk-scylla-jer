@@ -1,17 +1,10 @@
-if SHIELD_SCYLLA_LEFT
+if SHIELD_SCYLLA_LEFT || SHIELD_SCYLLA_RIGHT
 
-# Name must be less than 16 characters long!
 config ZMK_KEYBOARD_NAME
     default "ScyllaMK2"
 
-config ZMK_SPLIT_ROLE_CENTRAL
-    default y
-
-endif
-
-if SHIELD_SCYLLA_LEFT || if SHIELD_SCYLLA_RIGHT
-
-config ZMK_SPLIT
-    default y
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+    default y if SHIELD_SCYLLA_LEFT
+    default n if SHIELD_SCYLLA_RIGHT
 
 endif
